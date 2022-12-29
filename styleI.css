@@ -1,0 +1,307 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.TITULO {
+    padding: 20px;
+    object-fit: cover;
+    text-align: center;
+    margin-top: 100px;
+    /* background-color: #5e0e0e; */
+    background-image: url(fotos/Regional\ Natacion\ CLM\ \(3-04-2021\)\ SVAT\ \(137\).JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px #000000;
+}
+
+/* barra de navegacion */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:link {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background: #5e0e0e;
+    color: #ffffff;
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+    justify-content: space-between;
+    padding: 0 0 0 16px;
+    }
+}
+
+.navbar-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+body.open .navbar-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-overlay {
+    display: none;
+    }
+}
+
+.navbar-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-burger {
+    display: none;
+    }
+}
+.navbar-title {
+    margin: 0;
+    font-size: 16px;
+}
+
+.sub1titulo {
+    max-height: 64px;
+    margin-left: 20px;
+}
+
+
+.imagen-navbar {
+    width: 50px;
+}
+
+.navbar-menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 270px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #000000;
+    visibility: hidden;
+    transition: translate 0.3s;
+}
+
+body.open .navbar-menu {
+    translate: 0 0;
+    visibility: visible;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-menu {
+    position: static;
+    translate: 0 0;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+    }
+}
+.navbar-menu > button {
+    color: rgba(255, 255, 255, 0.5);
+    background: transparent;
+    padding: 0 8px;
+}
+
+.navbar-menu > button.active {
+    color: inherit;
+}
+
+/* NOTICIAS */
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: roboto;
+}
+
+.post-list {
+    display: flex;
+    min-height: 30rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 15px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.post-img-1 {
+    background: url(fotos/Regional\ Natacion\ CLM\ \(3-04-2021\)\ SVAT\ \(137\).JPG);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-2 {
+    background: url(fotos/LOGO.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-3 {
+    background: url(fotos/LOGO2.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post {
+    box-shadow: 0 1px 6px 1px rgba(138, 138, 138, 0.1);
+    overflow: hidden;
+    transition: .2s;
+    background-color: rgb(49, 49, 49);
+}
+
+.post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1px 16px 3px rgba(143, 143, 143, 0.2);
+}
+
+.post-header {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.post:hover .post-img-1
+.post:hover .post-img-2
+.post:hover .post-img-3 {
+    transform: scale(1.1);
+}
+
+.post-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.post-body span {
+    display: inline-block;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.post-body {
+    margin-bottom: 15px;
+}
+
+.post-body p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.post-body .post-link {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgb(216, 6, 6);
+    color: white;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 1px 16px 3px rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+
+.post-body .post-link:hover {
+    background: rgb(161, 5, 5);
+    box-shadow: 0 1px 16px 3px rgba(0, 0, 0, .2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 840px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.ULTIMAS-NOTICIAS {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 70px;
+}
+
